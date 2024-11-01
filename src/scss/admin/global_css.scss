@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+a:focus {
+    box-shadow: none;
+}
+
+
+.toggle-path {
+    transition: background 0.3s ease-in-out;
+}
+
+.toggle-circle {
+    top: 0.2rem;
+    left: 0.25rem;
+    transition: all 0.3s ease-in-out;
+}
+
+input:checked~.toggle-circle {
+    transform: translateX(100%);
+}
+
+input:checked~.toggle-path {
+    background-color: #81E6D9;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.router-link-active,
+.router-link-active:hover {
+    @apply bg-brand-blue;
+    color: white !important;
+}
+
+.has-error {
+    input {
+        @apply border-red-600;
+    }
+    .help-text {
+        @apply text-red-600;
+    }
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.leadsms-settings .leadsms-settings-content {
+    padding-right: 20px;
+    padding-bottom: 15px;
+    a {
+        color: #1D9AD6;
+    }
+    .list-items li {
+        display: flex;
+        gap: 6px;
+    }
+}
